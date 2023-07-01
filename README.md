@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Frontend Mentor]()
-- Live Site URL: [Github Pages]()
+- Solution URL: [Frontend Mentor](https://www.frontendmentor.io/solutions/results-summary-component-using-html-and-scss-lOHoBhuK1l)
+- Live Site URL: [Github Pages](https://bccpadge.github.io/results-summary-component/)
 
 ## My process
 
