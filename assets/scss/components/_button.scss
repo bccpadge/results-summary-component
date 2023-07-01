@@ -1,0 +1,17 @@
+.button {
+  cursor: pointer;
+  line-height: 1;
+  border: none;
+  padding: 1em 2em;
+  border-radius: var(--radius-pill);
+  color: hsl(var(--white-clr));
+
+  &--gray-blue {
+    background: var(--dark-gray-blue-clr);
+  }
+
+  &:is(:hover, :focus-visible) {
+    background: linear-gradient(var(--background-1-clr), var(--background-2-clr));
+    transition: all 350ms ease;
+  }
+}

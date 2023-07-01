@@ -1,0 +1,239 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap");
+:root {
+  --accent-1-clr: 0, 100%, 67%;
+  --accent-2-clr: 39, 100%, 56%;
+  --accent-3-clr: 166, 100%, 37%;
+  --accent-4-clr: 234, 85%, 45%;
+  --blue-clr: hsl(234, 85%, 45%);
+  --background-1-clr: hsl(252, 100%, 67%);
+  --background-2-clr: hsl(241, 81%, 54%);
+  --circle-1-clr: hsla(256, 72%, 46%, 1);
+  --circle-2-clr: hsla(241, 72%, 46%, 0);
+  --white-clr: 0, 0%, 100%;
+  --pale-blue-clr: hsl(221, 100%, 96%);
+  --light-lavender-clr: hsl(241, 100%, 89%);
+  --dark-gray-blue-clr: hsl(224, 30%, 27%);
+  --fs-18: 1.125rem;
+  --fs-24: 1.5rem;
+  --fs-28: 1.75rem;
+  --fs-80: 5rem;
+  --fw-500: 500;
+  --fw-700: 700;
+  --fw-800: 800;
+  --ff-hanken-grotesk: "Hanken Grotesk", sans-serif;
+  /* border radius */
+  --radius-pill: 6.25rem;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+html {
+  font-size: 100%;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+.attribution {
+  position: fixed;
+  bottom: 1em;
+  font-size: 0.75rem;
+  left: 1em;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+body {
+  font-family: var(--ff-hanken-grotesk);
+  color: var(--dark-gray-blue-clr);
+}
+@media (min-width: 37.5em) {
+  body {
+    display: grid;
+    place-content: center;
+  }
+}
+
+:is(.results__title, .summary__title) {
+  font-size: var(--fs-24);
+  font-weight: var(--fw-700);
+}
+
+.grid {
+  display: grid;
+}
+.grid__spacing {
+  align-content: start;
+  gap: 1rem;
+}
+.grid__spacing[data-spacing=large] {
+  gap: 2rem;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.results__summary {
+  --padding: 2.5rem;
+  --border-radius-32: 2rem;
+  --box-shadow: hsl(224, 30%, 27%, 0.2);
+  max-width: 46rem;
+}
+@media (min-width: 37.5em) {
+  .results__summary {
+    margin-inline: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    overflow: hidden;
+    box-shadow: 0.5rem 1rem 3rem var(--box-shadow);
+    border-radius: var(--border-radius-32);
+  }
+  .results__summary .results {
+    border-radius: inherit;
+  }
+}
+
+.results {
+  color: hsl(var(--white-clr), 0.7);
+  text-align: center;
+  padding: var(--padding) calc(var(--padding) * 1.5);
+  background: linear-gradient(var(--background-1-clr), var(--background-2-clr));
+  border-radius: 0 0 var(--border-radius-32) var(--border-radius-32);
+}
+.results__score {
+  place-content: center;
+  width: 12rem;
+  margin-inline: auto;
+  background: linear-gradient(var(--blue-clr), var(--circle-2-clr));
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+}
+.results__score span {
+  display: block;
+  font-size: var(--fs-80);
+  color: hsl(var(--white-clr));
+  line-height: 1;
+}
+.results__status {
+  font-size: var(--fs-28);
+  color: hsl(var(--white-clr));
+}
+
+.summary {
+  padding: var(--padding);
+}
+.summary__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: hsl(var(--item-clr), 0.05);
+}
+.summary__item[data-item-type=accent-1] {
+  --item-clr: var(--accent-1-clr);
+}
+.summary__item[data-item-type=accent-2] {
+  --item-clr: var(--accent-2-clr);
+}
+.summary__item[data-item-type=accent-3] {
+  --item-clr: var(--accent-3-clr);
+}
+.summary__item[data-item-type=accent-4] {
+  --item-clr: var(--accent-4-clr);
+}
+.summary__item--title {
+  color: hsl(var(--item-clr));
+  font-weight: var(--fw-700);
+}
+.summary__item--score {
+  --score-clr: hsla(224, 30%, 27%, 0.6);
+  color: var(--score-clr);
+  font-weight: var(--fw-800);
+}
+.summary__item--score span {
+  color: hsl(224, 30%, 27%);
+}
+
+.button {
+  cursor: pointer;
+  line-height: 1;
+  border: none;
+  padding: 1em 2em;
+  border-radius: var(--radius-pill);
+  color: hsl(var(--white-clr));
+}
+.button--gray-blue {
+  background: var(--dark-gray-blue-clr);
+}
+.button:is(:hover, :focus-visible) {
+  background: linear-gradient(var(--background-1-clr), var(--background-2-clr));
+  transition: all 350ms ease;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,19 @@
+.grid {
+  display: grid;
+
+  &__spacing {
+    align-content: start;
+    gap: 1rem;
+
+    &[data-spacing="large"] {
+      gap: 2rem;
+    }
+  }
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}

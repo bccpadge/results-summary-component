@@ -1,0 +1,15 @@
+body {
+  font-family: var(--ff-hanken-grotesk);
+  color: var(--dark-gray-blue-clr);
+
+  @media (min-width: 37.5em) {
+    display: grid;
+    place-content: center;
+  }
+}
+
+// title styles
+:is(.results__title, .summary__title) {
+  font-size: var(--fs-24);
+  font-weight: var(--fw-700);
+}

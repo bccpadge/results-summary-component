@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap");
+
+:root {
+  // accent colors for summary section
+  --accent-1-clr: 0, 100%, 67%;
+  --accent-2-clr: 39, 100%, 56%;
+  --accent-3-clr: 166, 100%, 37%;
+  --accent-4-clr: 234, 85%, 45%;
+
+  //  result score color
+  --blue-clr: hsl(234, 85%, 45%);
+
+  // gradient colors
+  --background-1-clr: hsl(252, 100%, 67%);
+  --background-2-clr: hsl(241, 81%, 54%);
+  --circle-1-clr: hsla(256, 72%, 46%, 1);
+  --circle-2-clr: hsla(241, 72%, 46%, 0);
+
+  // neutral colors
+  --white-clr: 0, 0%, 100%;
+  --pale-blue-clr: hsl(221, 100%, 96%);
+  --light-lavender-clr: hsl(241, 100%, 89%);
+  --dark-gray-blue-clr: hsl(224, 30%, 27%);
+
+  // typography
+  // fs-18 is font size: 18px converted to rem units;
+  --fs-18: 1.125rem;
+  --fs-24: 1.5rem;
+  --fs-28: 1.75rem;
+  --fs-80: 5rem;
+
+  --fw-500: 500;
+  --fw-700: 700;
+  --fw-800: 800;
+  --ff-hanken-grotesk: "Hanken Grotesk", sans-serif;
+
+  /* border radius */
+  --radius-pill: 6.25rem;
+}
