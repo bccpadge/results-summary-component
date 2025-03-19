@@ -9,7 +9,7 @@
   --background-2-clr: hsl(241, 81%, 54%);
   --circle-1-clr: hsla(256, 72%, 46%, 1);
   --circle-2-clr: hsla(241, 72%, 46%, 0);
-  --white-clr: 0, 0%, 100%;
+  --white-clr: hsl(0, 0%, 100%);
   --pale-blue-clr: hsl(221, 100%, 96%);
   --light-lavender-clr: hsl(241, 100%, 89%);
   --dark-gray-blue-clr: hsl(224, 30%, 27%);
@@ -102,9 +102,15 @@ select {
   font-size: 0.75rem;
   left: 1em;
   text-align: center;
+  display: none;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+@media (min-width: 37.5em) {
+  .attribution {
+    display: block;
+  }
 }
 
 body {
@@ -115,6 +121,7 @@ body {
   body {
     display: grid;
     place-content: center;
+    background-color: var(--pale-blue-clr);
   }
 }
 
@@ -154,6 +161,7 @@ body {
     overflow: hidden;
     box-shadow: 0.5rem 1rem 3rem var(--box-shadow);
     border-radius: var(--border-radius-32);
+    background-color: var(--white-clr);
   }
   .results__summary .results {
     border-radius: inherit;
@@ -161,7 +169,8 @@ body {
 }
 
 .results {
-  color: hsl(var(--white-clr), 0.7);
+  --clr-text: 0 0% 100%;
+  color: hsl(var(--clr-text)/0.6);
   text-align: center;
   padding: var(--padding) calc(var(--padding) * 1.5);
   background: linear-gradient(var(--background-1-clr), var(--background-2-clr));
@@ -178,16 +187,17 @@ body {
 .results__score span {
   display: block;
   font-size: var(--fs-80);
-  color: hsl(var(--white-clr));
+  color: var(--white-clr);
   line-height: 1;
 }
 .results__status {
   font-size: var(--fs-28);
-  color: hsl(var(--white-clr));
+  color: var(--white-clr);
 }
 
 .summary {
   padding: var(--padding);
+  background-color: var(--white-clr);
 }
 .summary__item {
   display: flex;
@@ -228,7 +238,7 @@ body {
   border: none;
   padding: 1em 2em;
   border-radius: var(--radius-pill);
-  color: hsl(var(--white-clr));
+  color: var(--white-clr);
 }
 .button--gray-blue {
   background: var(--dark-gray-blue-clr);
@@ -236,4 +246,4 @@ body {
 .button:is(:hover, :focus-visible) {
   background: linear-gradient(var(--background-1-clr), var(--background-2-clr));
   transition: all 350ms ease;
-}/*# sourceMappingURL=style.css.map */
+}

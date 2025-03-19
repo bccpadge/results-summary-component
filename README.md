@@ -27,7 +27,7 @@ Users should be able to:
 
 ### Screenshot
 
-![desktop results summary component](./desktop-results-summary.png)
+![desktop results summary component](./desktop-screenshot.png)
 
 ### Links
 
@@ -57,6 +57,7 @@ I want to continue using the BEM methodology in future projects.
 ### Useful resources
 
 - [BEM website](https://getbem.com/)
+- [Shots](https://shots.so/) - Create amazing mockups in seconds
 
 ## Author
 

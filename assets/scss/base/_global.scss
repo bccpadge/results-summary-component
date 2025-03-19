@@ -2,9 +2,11 @@ body {
   font-family: var(--ff-hanken-grotesk);
   color: var(--dark-gray-blue-clr);
 
+
   @media (min-width: 37.5em) {
     display: grid;
     place-content: center;
+    background-color: var(--pale-blue-clr);
   }
 }
 

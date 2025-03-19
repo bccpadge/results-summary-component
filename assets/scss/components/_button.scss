@@ -4,7 +4,7 @@
   border: none;
   padding: 1em 2em;
   border-radius: var(--radius-pill);
-  color: hsl(var(--white-clr));
+  color: var(--white-clr);
 
   &--gray-blue {
     background: var(--dark-gray-blue-clr);

@@ -10,6 +10,7 @@
     overflow: hidden;
     box-shadow: 0.5rem 1rem 3rem var(--box-shadow);
     border-radius: var(--border-radius-32);
+    background-color: var(--white-clr);
 
     .results {
       border-radius: inherit;
@@ -18,7 +19,8 @@
 }
 
 .results {
-  color: hsl(var(--white-clr), 0.7);
+  --clr-text: 0 0% 100%;
+  color: hsl(var(--clr-text) / 0.6);
   text-align: center;
   padding: var(--padding) calc(var(--padding) * 1.5);
   background: linear-gradient(var(--background-1-clr), var(--background-2-clr));
@@ -35,13 +37,13 @@
     span {
       display: block;
       font-size: var(--fs-80);
-      color: hsl(var(--white-clr));
+      color: var(--white-clr);
       line-height: 1;
     }
   }
 
   &__status {
     font-size: var(--fs-28);
-    color: hsl(var(--white-clr));
+    color: var(--white-clr);
   }
 }

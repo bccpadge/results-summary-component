@@ -77,7 +77,14 @@ select {
   font-size: 0.75rem;
   left: 1em;
   text-align: center;
+
   a {
     color: hsl(228, 45%, 44%);
+  }
+
+  display: none;
+
+  @media (min-width: 37.5em) {
+    display: block;
   }
 }
